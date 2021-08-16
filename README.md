@@ -3,10 +3,10 @@
 # Frequency-Supervised-MR-to-CT-Image-Synthesis
 Unsharp Mask Guided Filtering, TIP, 2021 [<a href="https://arxiv.org/pdf/2106.01428.pdf" target="_blank">pdf</a>]
 
-![image](https://github.com/shizenglin/Frequency-Supervised-MR-to-CT-Image-Synthesis/blob/main/overview.png)
+![image](https://github.com/shizenglin/Unsharp-Mask-Guided-Filtering/blob/main/motivation.png)
 <p> &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 Motivation of our approach </p>
 
-![image](https://github.com/shizenglin/Frequency-Supervised-MR-to-CT-Image-Synthesis/blob/main/overview.png)
+![image](https://github.com/shizenglin/Unsharp-Mask-Guided-Filtering/blob/main/network.png)
 <p> &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 Network architecture  of our approach </p>
 
 <h2> Requirements </h2>
