@@ -16,7 +16,7 @@ Unsharp Mask Guided Filtering, IEEE Transactions on Image Processing (TIP), 2021
 <br> 4. Tensorflow 2.0 or higher
 
 <h2> Training </h2>
-     1. Prepare your data (download the NYU Depth V2 dataset <a href="https://arxiv.org/pdf/2106.01428.pdf" target="_blank">here</a>) following Section V-A.
+     1. Prepare your data (download the NYU Depth V2 dataset <a href="https://drive.google.com/file/d/1RAYK7zm_qXp6nrzjaNVaBRQc8sk9hzkn/view?usp=sharing" target="_blank">here</a>) following Section V-A.
 <br> 2. Set the experiment settings in ¨tr_param.ini¨ in which phase = train, and set other parameters accordingly (refer to our paper).
 <br> 3. Run ¨python main.py¨
 
