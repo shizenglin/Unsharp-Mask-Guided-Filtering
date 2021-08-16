@@ -7,6 +7,7 @@
 <h1> Unsharp-mask guided filtering without learning </h1>
 <br> You can find the code in the folder of "matlab"
 
+<h2> Usage </h2>
 <br> Run "example_smoothing.m", "example_enhancement.m", and "example_flash.m" to get the Figures 3, 4 and 5
 
 <h1> Unsharp-mask guided filtering with learning </h1>
