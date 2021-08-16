@@ -4,10 +4,16 @@
 Unsharp Mask Guided Filtering, IEEE Transactions on Image Processing (TIP), 2021 [<a href="https://arxiv.org/pdf/2106.01428.pdf" target="_blank">pdf</a>]
 
 ![image](https://github.com/shizenglin/Unsharp-Mask-Guided-Filtering/blob/main/motivation.png)
-<p> &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 Motivation of our approach </p>
 
 ![image](https://github.com/shizenglin/Unsharp-Mask-Guided-Filtering/blob/main/network.png)
-<p> &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 &#12288 Network architecture  of our approach </p>
+
+<h1> Unsharp-mask guided filtering without learning </h1>
+<br> You can find the code in the folder of "matlab"
+
+<br> Run "example_smoothing.m", "example_enhancement.m", and "example_flash.m" to get the Figures 3, 4 and 5
+
+<h1> Unsharp-mask guided filtering with learning </h1>
+<br> You can find the code in the folder of "learning"
 
 <h2> Requirements </h2>
      1. CUDA 8.0 and Cudnn 7.5 or higher
