@@ -1,4 +1,4 @@
-# Unsharp Mask Guided Filtering, IEEE Transactions on Image Processing (TIP), 2021 [<a href="https://arxiv.org/pdf/2106.01428.pdf" target="_blank">pdf</a>]
+# [Unsharp Mask Guided Filtering, IEEE Transactions on Image Processing (TIP), 2021](https://arxiv.org/pdf/2106.01428.pdf)
 
 ![image](https://github.com/shizenglin/Unsharp-Mask-Guided-Filtering/blob/main/motivation.png)
 
