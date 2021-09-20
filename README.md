@@ -17,7 +17,7 @@
      1. CUDA 8.0 and Cudnn 7.5 or higher
 <br> 2. GPU memory 10GB or higher
 <br> 3. Python 2.7 or higher 
-<br> 4. Tensorflow 2.0 or higher
+<br> 4. Tensorflow 2.0 or higher. If your Tensorflow version is lower than 2.0, you should replace "import tensorflow.compat.v1 as tf" with "import tensorflow as tf" in "main.py", "model.py", and "ops.py"
 
 <h2> Training </h2>
      1. Prepare your data (download the NYU Depth V2 dataset <a href="https://drive.google.com/file/d/1RAYK7zm_qXp6nrzjaNVaBRQc8sk9hzkn/view?usp=sharing" target="_blank">here</a>) following Section V-A.
