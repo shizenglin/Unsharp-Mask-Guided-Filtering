@@ -54,10 +54,15 @@ class UMGFNet(object):
         self.input_target = tf.placeholder(dtype=tf.float32, shape=[None, None, None, 1], name='input_target')
         self.input_gt = tf.placeholder(dtype=tf.float32, shape=[None, None, None, 1], name='input_gt')
 
+        # for our model
         self.pred_depth_list = self.umgf_model(self.input_guide, self.input_target,self.niters)#
         self.total_loss = 0
         for pred_depth in self.pred_depth_list:
             self.total_loss += self.l1_loss(pred_depth, self.input_gt)
+        
+        #for compared models. Here, we use svlr_model as an example
+        #self.pred_depth = self.svlr_model(self.input_guide, self.input_target)
+        #self.total_loss = self.l1_loss(self.pred_depth, self.input_gt)
 
         # trainable variables
         self.u_vars = tf.trainable_variables()
@@ -202,6 +207,7 @@ class UMGFNet(object):
 
         log_file.close()
 
+    # for our model
     def test_training(self, test_guide_img, test_input_depth, test_gt_depth, step, log_file):
         n,w,h,c = test_guide_img.shape
         all_rmse_list = np.zeros([self.niters,n])
@@ -248,6 +254,33 @@ class UMGFNet(object):
         log_file.write('best_ssim: %0.4f\n'%self.best_ssim)
 
         log_file.flush()
+   
+    # for compared model
+    """def test_training(self, test_guide_img, test_input_depth, test_gt_depth, step, log_file):
+        n,w,h,c = test_guide_img.shape
+        all_rmse = np.zeros([n])
+        all_ssim = np.zeros([n])
+        for k in range(0, n):
+            #print (k+1)
+            if self.inputI_chn<3:
+                test_guide_img_ins = rgb2gray(test_guide_img[k]).reshape(1,w,h,1)#test_guide_img[k].reshape(1,w,h,c)##
+            else:
+                test_guide_img_ins = test_guide_img[k].reshape(1,w,h,c)##
+            test_input_depth_ins = test_input_depth[k].reshape(1,w,h,1)
+
+            pred_depth  = self.sess.run(self.pred_depth, feed_dict={self.input_guide: test_guide_img_ins, self.input_target: test_input_depth_ins})
+
+            pre_depth_scaled = pred_depth[0,6:-6,6:-6,0]*1000.0
+            gt_depth_scaled = test_gt_depth[k,6:-6,6:-6]*1000.0
+            all_rmse[k] = np.sqrt(np.mean(pow(pre_depth_scaled-gt_depth_scaled,2)))
+            data_range = np.max(gt_depth_scaled)-np.min(gt_depth_scaled)
+            all_ssim[k] = compare_ssim(gt_depth_scaled,pre_depth_scaled,data_range=data_range)
+
+        mean_rmse = np.mean(all_rmse, axis=0)
+        mean_ssim = np.mean(all_ssim, axis=0)
+        print("Epoch: [%d], rmse:%0.2f, ssim:%0.4f\n"%(step, mean_rmse, mean_ssim))
+        log_file.write("Epoch: [%d], rmse:%0.2f, ssim:%0.4f\n"%(step, mean_rmse, mean_ssim))
+        log_file.flush()"""
 
     def test(self):
 
