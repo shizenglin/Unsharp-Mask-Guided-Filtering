@@ -32,10 +32,13 @@
 
 Please cite our paper when you use this code.
 
-     @inproceedings{shi2021filtering,
-     title={Unsharp Mask Guided Filtering},
-     author={Zenglin Shi, Yunlu Chen, Efstratios Gavves, Pascal Mettes, and Cees G. M. Snoek},
-     booktitle={IEEE Transactions on Image Processing},
-     year={2021}
+     @article{shi2021unsharp,
+        title={Unsharp Mask Guided Filtering},
+        author={Shi, Zenglin and Chen, Yunlu and Gavves, Efstratios and Mettes, Pascal and Snoek, Cees GM},
+        journal={IEEE Transactions on Image Processing},
+        volume={30},
+        pages={7472 - 7485},
+        year={2021},
+        publisher={IEEE}
      }
 
